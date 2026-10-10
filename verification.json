@@ -1,0 +1,39 @@
+{
+  "adversarial_cli_and_read_only_cases_in_tests": 22,
+  "all_expected_outcomes_verified": true,
+  "commands": [
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py examples/pass.json --pointers examples/pointers.json",
+      "expected_exit": 0,
+      "output_sha256": "f84d7e87f053a98f9d6ee2ba7c9c74e0b3dd747b488ce396ca8257a3145e4654",
+      "status": "pass"
+    },
+    {
+      "actual_exit": 1,
+      "command": "python3 tool.py examples/fail.json --pointers examples/pointers.json",
+      "expected_exit": 1,
+      "output_sha256": "5cf1882c07ab02d916c1f321ad40164a5d67eca39f03822bfbb6d921b3642d7a",
+      "status": "fail"
+    },
+    {
+      "actual_exit": 2,
+      "command": "python3 tool.py examples/malformed.json --pointers examples/pointers.json",
+      "expected_exit": 2,
+      "output_sha256": "c9a275f0bd8fed8ffab6b4901452f8bd36dd738788e5767ce9cf084401bbb235",
+      "status": "error"
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 tool.py --help",
+      "expected_exit": 0
+    },
+    {
+      "actual_exit": 0,
+      "command": "python3 -m unittest -v test_tool.py",
+      "expected_exit": 0,
+      "test_count": 22
+    }
+  ],
+  "runtime": "3.12.14"
+}
